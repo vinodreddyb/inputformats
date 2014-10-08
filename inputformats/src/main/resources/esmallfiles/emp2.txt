@@ -1,0 +1,4 @@
+[EmpNo:DOB:FName:LName:HireDate:DeptNo]
+10004:1953-09-02:Vinod:Facello:M:1986-06-26:d005
+10005:1964-06-02:Kumar:Simmel:F:1985-11-21:d007
+10006:1959-12-03:Reddy:Bamford:M:1986-08-28:d004
