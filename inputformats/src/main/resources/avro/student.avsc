@@ -1,0 +1,15 @@
+{
+  "type" : "record",
+  "name" : "StudentMarks",
+  "namespace" : "com.vinod.mapred.inputformat.avro.util",
+  "fields" : [ {
+  "name" : "student_id",
+  "type" : "int"
+  }, {
+  "name" : "subject_id",
+  "type" : "int"
+  }, {
+  "name" : "marks",
+  "type" : "int"
+  } ]
+}
