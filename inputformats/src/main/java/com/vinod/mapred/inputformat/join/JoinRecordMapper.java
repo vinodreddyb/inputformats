@@ -19,6 +19,7 @@ public class JoinRecordMapper
       throws IOException, InterruptedException {
     parser.parse(value);
     context.write(new TextPair(parser.getStationId(), "1"), value);
+    System.out.println(new TextPair(parser.getStationId(), "1") +":----:"+ value);
   }
 
 }

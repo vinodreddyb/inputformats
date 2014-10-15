@@ -18,6 +18,7 @@ public class TextPair implements WritableComparable<TextPair> {
   }
   
   public TextPair(String first, String second) {
+	  
     set(new Text(first), new Text(second));
   }
   
@@ -66,7 +67,7 @@ public class TextPair implements WritableComparable<TextPair> {
 
   @Override
   public String toString() {
-    return first + "\t" + second;
+    return first + ":::" + second;
   }
   
   @Override
@@ -83,6 +84,7 @@ public class TextPair implements WritableComparable<TextPair> {
   public static class Comparator extends WritableComparator {
     
     private static final Text.Comparator TEXT_COMPARATOR = new Text.Comparator();
+    
     
     public Comparator() {
       super(TextPair.class);

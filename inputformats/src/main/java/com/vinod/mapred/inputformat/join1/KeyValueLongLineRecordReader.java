@@ -1,4 +1,4 @@
-package com.vinod.mapred.inputformat.composit;
+package com.vinod.mapred.inputformat.join1;
 
 import java.io.IOException;
 
@@ -147,9 +147,9 @@ public class KeyValueLongLineRecordReader extends
 		if (currentPosition < splitEnd) {
 			newSize = reader.readLine(recordValue);
 			String str = new String(recordValue.getBytes(), "UTF-8");
-			System.out.println("String-------------->" + str);
+			
 			String[] splitLine = str.split(split);
-			System.out.println("String split-------------->" + splitLine[0]);
+			
 			recordKey.set(Long.parseLong(splitLine[0]));
 			currentPosition = currentPosition + newSize;
 		}

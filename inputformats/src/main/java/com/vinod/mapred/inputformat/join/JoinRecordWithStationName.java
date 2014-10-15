@@ -35,9 +35,9 @@ public class JoinRecordWithStationName extends Configured implements Tool {
     Job job = new Job(getConf(), "Join weather records with station names");
     job.setJarByClass(getClass());
     
-    Path ncdcInputPath = new Path("/home/vinod/git/inputformat/inputformats/src/main/resources/join/sample.txt");
-    Path stationInputPath = new Path("/home/vinod/git/inputformat/inputformats/src/main/resources/join/stations-fixed-width.txt");
-    Path outputPath = new Path("/home/vinod/work/join");
+    Path ncdcInputPath = new Path("/home/vinod/git/inputformats/inputformats/src/main/resources/join/sample.txt");
+    Path stationInputPath = new Path("/home/vinod/git/inputformats/inputformats/src/main/resources/join/stations-fixed-width.txt");
+    Path outputPath = new Path("/home/vinod/work/output/join");
     outputPath.getFileSystem(getConf()).delete(outputPath, true);
     
     MultipleInputs.addInputPath(job, ncdcInputPath,
@@ -47,7 +47,7 @@ public class JoinRecordWithStationName extends Configured implements Tool {
     FileOutputFormat.setOutputPath(job, outputPath);
     
     /*[*/job.setPartitionerClass(KeyPartitioner.class);
-    job.setGroupingComparatorClass(TextPair.FirstComparator.class);/*]*/
+   job.setGroupingComparatorClass(TextPair.FirstComparator.class);/*]*/
     
     job.setMapOutputKeyClass(TextPair.class);
     

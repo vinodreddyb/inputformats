@@ -1,4 +1,4 @@
-package com.vinod.mapred.inputformat.composit;
+package com.vinod.mapred.inputformat.join1;
 
 import java.io.IOException;
 
