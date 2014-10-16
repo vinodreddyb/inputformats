@@ -5,18 +5,13 @@
 	<artifactId>inputformats</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<hadoop.version>1.2.1</hadoop.version>
+		<hadoop.version>2.2.0</hadoop.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-core</artifactId>
-			<version>${hadoop.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-test</artifactId>
+			<artifactId>hadoop-client</artifactId>
 			<version>${hadoop.version}</version>
 		</dependency>
 		<dependency>

@@ -55,7 +55,7 @@ public class MapSideJoinJob extends Configured implements Tool {
 		 */
 
 		//
-		Job job = new Job(getConf(), "Join weather records with station names");
+		Job job = Job.getInstance();
 		job.setJarByClass(getClass());
 
 		Path emp = new Path(
